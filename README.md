@@ -34,3 +34,17 @@ A note-taking web application built with **React**, **Vite**, **MUI**, and **Typ
 git clone https://github.com/Nis13/Note-taking-frontend.git
 cd Note-taking-frontend
 ```
+
+### 2. **Install dependencies**
+
+```bash
+npm Install
+```
+
+### 3. **Start the development server**
+
+```bash
+npm run dev
+```
+
+The app will be running at http://localhost:5173/ by default.
