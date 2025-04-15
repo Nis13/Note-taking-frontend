@@ -1,54 +1,36 @@
-# React + TypeScript + Vite
+# Note-Taking Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A note-taking web application built with **React**, **Vite**, **MUI**, and **TypeScript**. This is the frontend portion of a full-stack note-taking app.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Engineering Decisions
 
-## Expanding the ESLint configuration
+### 1. **State Management**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Redux Toolkit** is used for global state management, chosen for its simplicity and scalability
+- **React Query (TanStack)** manages API calls, and background updates efficiently
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 2. **Forms and Validation**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Formik** is used for form handling due to its robust structure and ease of use with dynamic fields
+- **Yup** handles schema-based form validation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 3. **Type Safety**
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- Entire project is written in **TypeScript**
+
+### 6. **Routing**
+
+- **React Router** is used to support dynamic and nested routing with a clean API.
+
+---
+
+## Setup Instructions
+
+### 1. **Clone the repository**
+
+```bash
+git clone https://github.com/Nis13/Note-taking-frontend.git
+cd Note-taking-frontend
 ```
