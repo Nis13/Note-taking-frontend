@@ -38,7 +38,7 @@ cd Note-taking-frontend
 ### 2. **Install dependencies**
 
 ```bash
-npm Install
+npm install
 ```
 
 ### 3. **Start the development server**
